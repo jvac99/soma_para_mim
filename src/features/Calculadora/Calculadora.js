@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Calculadora.css';
-import Header from '../../components/Header/Header';
+import Header from '../../containers/Header/Header';
 import Button from '../../components/Button/Button';
 import InputNumber from '../../components/InputNumber/InputNumber';
 
-export default class Calculadora extends React.Component {
+class Calculadora extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,17 +38,19 @@ export default class Calculadora extends React.Component {
                         titulo="Soma para mim"
                     />
                     <form onSubmit={this.handleSubmit}>
-                        <div>
-                            <label className="valor">
+                        <div className="valor">
+                            <label>
                                 {this.state.result}
                             </label>
                         </div>
-                        <InputNumber onChange={this.onChange1} />
-                        <InputNumber onChange={this.onChange2} />
-                        <Button valor="+" type="submit" onSubmit={this.handleSubmit} />
+                        <InputNumber onChange={this.onChange1} texto={"Número"} />
+                        <InputNumber onChange={this.onChange2} texto={"Número"} />
+                        <Button valor={"+"} tipo={"submit"} />
                     </form>
                 </div>
             </div>
         );
     }
 }
+
+export default Calculadora;

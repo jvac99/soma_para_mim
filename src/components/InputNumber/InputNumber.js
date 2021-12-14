@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './InputNumber.css';
 
-export default class InputNumber extends React.Component {
+class InputNumber extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
     render() {
+
+        const { texto, onChange } = this.props;
+
         return (
-            <input type="number" className="inputNumber" placeholder="Número" required onChange={this.props.onChange} />
+            <input type="number" className="inputNumber" placeholder={texto} required onChange={onChange} />
         );
     }
 }
+
+export default InputNumber;

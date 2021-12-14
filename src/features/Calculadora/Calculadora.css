@@ -16,5 +16,15 @@
 }
 
 .valor {
+    font-size: 18px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 180px;
+    height: 30px;
+    white-space: nowrap;
+}
+
+.valor label {
     text-align: center;
 }

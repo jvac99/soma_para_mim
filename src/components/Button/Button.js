@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Button.css';
 
-export default class Button extends React.Component {
+class Button extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
     render() {
-        const { type, valor } = this.props;
+        const { tipo, valor, click, enviar } = this.props;
         return (
-            <button className='button' type={type} onClick={this.handleClick} onSubmit={this.handleSubmit}>
+            <button className='button' type={tipo} onClick={click} onSubmit={enviar}>
                 {valor}
             </button>
         );
     }
 }
+
+export default Button;
