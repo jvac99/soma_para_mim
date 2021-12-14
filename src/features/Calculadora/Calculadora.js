@@ -4,6 +4,8 @@ import Header from '../../containers/Header/Header';
 import Button from '../../components/Button/Button';
 import InputNumber from '../../components/InputNumber/InputNumber';
 
+const titulo = process.env.REACT_APP_TITULO
+
 class Calculadora extends Component {
     constructor(props) {
         super(props);
@@ -35,7 +37,7 @@ class Calculadora extends Component {
             <div className="flex-box container-box">
                 <div className="content-box">
                     <Header
-                        titulo="Soma para mim"
+                        titulo={titulo}
                     />
                     <form onSubmit={this.handleSubmit}>
                         <div className="valor">
