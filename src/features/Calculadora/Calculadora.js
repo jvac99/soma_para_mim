@@ -36,9 +36,7 @@ class Calculadora extends Component {
         return (
             <div className="flex-box container-box">
                 <div className="content-box">
-                    <Header
-                        titulo={titulo}
-                    />
+                    <Header titulo={titulo} />
                     <form onSubmit={this.handleSubmit}>
                         <div className="valor">
                             <label>
